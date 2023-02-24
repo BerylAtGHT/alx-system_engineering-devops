@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-i=10
-while [ "$i" -gt 0 ]
-do
-    echo "Holberton School"
-    if [ "$i" -eq 2 ]
+counter=0
+while [ $counter -lt 10 ]; do
+    if [ $counter -eq 8 ]
     then
-        echo "Hi"
+	echo -e "Holberton School\nHi"
+    else
+	echo "Holberton School"
     fi
-    i=$((i - 1))
+    let counter=counter+1
 done
-i=$i
